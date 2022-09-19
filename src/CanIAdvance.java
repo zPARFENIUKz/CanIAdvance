@@ -9,8 +9,9 @@ public class CanIAdvance {
         int[] test5 = new int[]{3, 0, 0, 1, 4};
         int[] test6 = new int[]{3, 0, 0, 1, 0};
         int[] test7 = new int[]{0};
-        List<int[]> tests = List.of(test1, test2, test3, test4, test5, test6, test7);
-        List<Boolean> results = List.of(false, true, false, false, true, true, true);
+        int[] test8 = new int[]{1, 0};
+        List<int[]> tests = List.of(test1, test2, test3, test4, test5, test6, test7, test8);
+        List<Boolean> results = List.of(false, true, false, false, true, true, true, true);
         for (int i = 0; i < tests.size(); ++i)
         {
             if (canIAdvance(tests.get(i)) == results.get(i))
@@ -30,7 +31,7 @@ public class CanIAdvance {
         else if (array.length == 1) return true;
         else
         {
-            int maxAvaliableIndex = array[0];
+            int maxAvaliableIndex = 0;
             for (int i = 0; i <= maxAvaliableIndex; ++i)
             {
                 if (i + array[i] > maxAvaliableIndex)
