@@ -32,15 +32,16 @@ public class CanIAdvance {
         else
         {
             int maxAvaliableIndex = 0;
-            for (int i = 0; i <= maxAvaliableIndex; ++i)
+            for (int i = 0; i < array.length; ++i)
             {
+                if (i > maxAvaliableIndex) return false;
                 if (i + array[i] > maxAvaliableIndex)
                 {
                     maxAvaliableIndex = i + array[i];
                     if (i + maxAvaliableIndex >= array.length-1) return true;
                 }
             }
-            return false;
+            return true;
         }
     }
 }
