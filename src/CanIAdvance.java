@@ -38,7 +38,7 @@ public class CanIAdvance {
                 if (i + array[i] > maxAvaliableIndex)
                 {
                     maxAvaliableIndex = i + array[i];
-                    if (i + maxAvaliableIndex >= array.length-1) return true;
+                    if (maxAvaliableIndex >= array.length-1) return true;
                 }
             }
             return true;
